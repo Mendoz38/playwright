@@ -32,12 +32,11 @@ test('multiplication', async ({ page }) => {
     await page.getByRole('button', { name: 'multiplication' }).click();
     await page.getByRole('button', { name: '2' }).click();
     await page.getByRole('button', { name: '=' }).click();
-    await page.getByRole('button', { name: '4' }).click();
     await expect(page.locator('.screen')).toHaveText('4');
   });
 
   test('bouton 0', async ({ page }) => {
-    await page.getByRole('button', { name: '1' }).click();
+    await page.getByRole('button', { name: '0' }).click();
     await expect(page.locator('.screen')).toHaveText('0');
   });
 
